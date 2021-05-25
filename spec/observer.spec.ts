@@ -11,18 +11,18 @@ class Foo implements IConcreteObserver {
 }
 
 class ConcreteSubject implements ISubject<IConcreteObserver> {
-    private _subject: Subject<IConcreteObserver>;
+    private $subject: Subject<IConcreteObserver>;
 
     public constructor() {
-        this._subject = new Subject(this);
+        this.$subject = new Subject(this);
     }
 
     public attachObserver(observer: IConcreteObserver): void {
-        this._subject.attachObserver(observer);
+        this.$subject.attachObserver(observer);
     }
 
     public detachObserver(observer: IConcreteObserver): boolean {
-        return this._subject.detachObserver(observer);
+        return this.$subject.detachObserver(observer);
     }
 
     public notify(observer: IConcreteObserver): void {
@@ -30,7 +30,7 @@ class ConcreteSubject implements ISubject<IConcreteObserver> {
     }
 
     public emit(): void {
-        this._subject.notify();
+        this.$subject.notify();
     }
 }
 

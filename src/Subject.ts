@@ -12,16 +12,16 @@ import { ISubject} from './ISubject';
  * can be invoked.
  */
 export class Subject<TObserver> {
-    private _observers: Array<TObserver>;
-    private _subject: ISubject<TObserver>;
+    private $observers: TObserver[];
+    private $subject: ISubject<TObserver>;
 
     /**
      * 
      * @param subject The class that is doing the notifying.
      */
     public constructor(subject: ISubject<TObserver>) {
-        this._observers = [];
-        this._subject = subject;
+        this.$observers = [];
+        this.$subject = subject;
     }
 
     /**
@@ -30,7 +30,7 @@ export class Subject<TObserver> {
      * @param observer
      */
     public attachObserver(observer: TObserver): void {
-        this._observers.push(observer);
+        this.$observers.push(observer);
     }
 
     /**
@@ -39,9 +39,9 @@ export class Subject<TObserver> {
      * @returns {boolean} true if an observer was indeed, detached.
      */
     public detachObserver(observer: TObserver): boolean {
-        let idx: number = this._observers.indexOf(observer);
+        let idx: number = this.$observers.indexOf(observer);
         if (idx > -1) {
-            this._observers.splice(idx, 1);
+            this.$observers.splice(idx, 1);
             return true;
         }
 
@@ -52,8 +52,8 @@ export class Subject<TObserver> {
      * Notifies all attached observers
      */
     public notify(): void {
-        for (let i: number = 0; i < this._observers.length; i++) {
-            this._subject.notify(this._observers[i]);
+        for (let i: number = 0; i < this.$observers.length; i++) {
+            this.$subject.notify(this.$observers[i]);
         }
     }
 
@@ -62,6 +62,6 @@ export class Subject<TObserver> {
      * This should be used if no more broadcasts will be made.
      */
     public dispose(): void {
-        this._observers = [];
+        this.$observers = [];
     }
 }
