@@ -11,15 +11,15 @@ import { ISubject} from './ISubject';
  * should be implemented, which will receive a concrete observer which
  * can be invoked.
  */
-export class Subject<TObserver> {
+export class Subject<TObserver, T = void> {
     private $observers: TObserver[];
-    private $subject: ISubject<TObserver>;
+    private $subject: ISubject<TObserver, T>;
 
     /**
      * 
      * @param subject The class that is doing the notifying.
      */
-    public constructor(subject: ISubject<TObserver>) {
+    public constructor(subject: ISubject<TObserver, T>) {
         this.$observers = [];
         this.$subject = subject;
     }
@@ -51,9 +51,9 @@ export class Subject<TObserver> {
     /**
      * Notifies all attached observers
      */
-    public notify(): void {
+    public notify(data: T): void {
         for (let i: number = 0; i < this.$observers.length; i++) {
-            this.$subject.notify(this.$observers[i]);
+            this.$subject.notify(this.$observers[i], data);
         }
     }
 

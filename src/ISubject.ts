@@ -1,6 +1,6 @@
 
-export interface ISubject<TObserver> {
+export interface ISubject<TObserver, T = void> {
     attachObserver(observer: TObserver): void;
     detachObserver(observer: TObserver): boolean;
-    notify(observer: TObserver): void;
+    notify(observer: TObserver, data: T): void;
 }

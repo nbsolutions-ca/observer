@@ -3,18 +3,18 @@ import {ISubject} from '../src/ISubject';
 import {Subject} from '../src/Subject';
 
 interface IConcreteObserver {
-    onConcreteSubjectNotify(subject: ConcreteSubject): void;
+    onConcreteSubjectNotify(subject: ConcreteSubject, data: number): void;
 }
 
 class Foo implements IConcreteObserver {
     onConcreteSubjectNotify(subject: ConcreteSubject) {}
 }
 
-class ConcreteSubject implements ISubject<IConcreteObserver> {
-    private $subject: Subject<IConcreteObserver>;
+class ConcreteSubject implements ISubject<IConcreteObserver, number> {
+    private $subject: Subject<IConcreteObserver, number>;
 
     public constructor() {
-        this.$subject = new Subject(this);
+        this.$subject = new Subject<IConcreteObserver, number>(this);
     }
 
     public attachObserver(observer: IConcreteObserver): void {
@@ -25,12 +25,12 @@ class ConcreteSubject implements ISubject<IConcreteObserver> {
         return this.$subject.detachObserver(observer);
     }
 
-    public notify(observer: IConcreteObserver): void {
-        observer.onConcreteSubjectNotify(this);
+    public notify(observer: IConcreteObserver, data: number): void {
+        observer.onConcreteSubjectNotify(this, data);
     }
 
     public emit(): void {
-        this.$subject.notify();
+        this.$subject.notify(123);
     }
 }
 
@@ -44,6 +44,6 @@ describe('observers', () => {
         jest.spyOn(foo, 'onConcreteSubjectNotify');
         subject.emit();
 
-        expect(foo.onConcreteSubjectNotify).toHaveBeenCalledWith(subject);
+        expect(foo.onConcreteSubjectNotify).toHaveBeenCalledWith(subject, 123);
     });
 });
