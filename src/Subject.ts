@@ -1,4 +1,5 @@
 
+import {NBSObject} from '@nbsolutions/object';
 import { ISubject} from './ISubject';
 
 /**
@@ -11,7 +12,7 @@ import { ISubject} from './ISubject';
  * should be implemented, which will receive a concrete observer which
  * can be invoked.
  */
-export class Subject<TObserver, T = void> {
+export class Subject<TObserver, T = void> extends NBSObject {
     private $observers: TObserver[];
     private $subject: ISubject<TObserver, T>;
 
@@ -20,6 +21,7 @@ export class Subject<TObserver, T = void> {
      * @param subject The class that is doing the notifying.
      */
     public constructor(subject: ISubject<TObserver, T>) {
+        super();
         this.$observers = [];
         this.$subject = subject;
     }
