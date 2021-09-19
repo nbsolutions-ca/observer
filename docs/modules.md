@@ -1,6 +1,6 @@
-[@nbsolutions/observer - v1.0.1](README.md) / Exports
+[@nbsolutions/observer - v0.0.0](README.md) / Exports
 
-# @nbsolutions/observer - v1.0.1
+# @nbsolutions/observer - v0.0.0
 
 ## Table of contents
 

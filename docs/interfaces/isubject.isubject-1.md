@@ -1,4 +1,4 @@
-[@nbsolutions/observer - v1.0.1](../README.md) / [Exports](../modules.md) / [ISubject](../modules/isubject.md) / ISubject
+[@nbsolutions/observer - v0.0.0](../README.md) / [Exports](../modules.md) / [ISubject](../modules/isubject.md) / ISubject
 
 # Interface: ISubject<TObserver, T\>
 
@@ -37,7 +37,7 @@
 
 #### Defined in
 
-[src/ISubject.ts:3](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/ISubject.ts#L3)
+[src/ISubject.ts:3](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/ISubject.ts#L3)
 
 ___
 
@@ -57,7 +57,7 @@ ___
 
 #### Defined in
 
-[src/ISubject.ts:4](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/ISubject.ts#L4)
+[src/ISubject.ts:4](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/ISubject.ts#L4)
 
 ___
 
@@ -78,4 +78,4 @@ ___
 
 #### Defined in
 
-[src/ISubject.ts:5](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/ISubject.ts#L5)
+[src/ISubject.ts:5](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/ISubject.ts#L5)

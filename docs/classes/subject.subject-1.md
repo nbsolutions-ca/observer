@@ -1,4 +1,4 @@
-[@nbsolutions/observer - v1.0.1](../README.md) / [Exports](../modules.md) / [Subject](../modules/subject.md) / Subject
+[@nbsolutions/observer - v0.0.0](../README.md) / [Exports](../modules.md) / [Subject](../modules/subject.md) / Subject
 
 # Class: Subject<TObserver, T\>
 
@@ -69,7 +69,7 @@ NBSObject.constructor
 
 #### Defined in
 
-[src/Subject.ts:17](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L17)
+[src/Subject.ts:17](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L17)
 
 ## Methods
 
@@ -127,7 +127,7 @@ Attaches the observer to the subject
 
 #### Defined in
 
-[src/Subject.ts:34](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L34)
+[src/Subject.ts:34](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L34)
 
 ___
 
@@ -151,7 +151,7 @@ true if an observer was indeed, detached.
 
 #### Defined in
 
-[src/Subject.ts:43](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L43)
+[src/Subject.ts:43](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L43)
 
 ___
 
@@ -168,7 +168,7 @@ This should be used if no more broadcasts will be made.
 
 #### Defined in
 
-[src/Subject.ts:66](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L66)
+[src/Subject.ts:66](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L66)
 
 ___
 
@@ -208,7 +208,7 @@ Notifies all attached observers
 
 #### Defined in
 
-[src/Subject.ts:56](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L56)
+[src/Subject.ts:56](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L56)
 
 ___
 

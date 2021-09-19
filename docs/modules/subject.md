@@ -1,4 +1,4 @@
-[@nbsolutions/observer - v1.0.1](../README.md) / [Exports](../modules.md) / Subject
+[@nbsolutions/observer - v0.0.0](../README.md) / [Exports](../modules.md) / Subject
 
 # Module: Subject
 
