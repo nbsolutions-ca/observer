@@ -1,6 +1,6 @@
 {
   "name": "@nbsolutions/observer",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "description": "Traditional Observer Pattern",
   "publishConfig": {
     "access": "public",
