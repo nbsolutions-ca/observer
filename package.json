@@ -2,6 +2,10 @@
   "name": "@nbsolutions/observer",
   "version": "1.0.1",
   "description": "Traditional Observer Pattern",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
   "main": "./lib/api.js",
   "types": "./types/api.d.ts",
   "scripts": {
@@ -50,9 +54,11 @@
     "ts-node": "10.0.0",
     "typedoc": "0.20.36",
     "typedoc-plugin-markdown": "3.9.0",
-    "typescript": "4.2.4"
+    "typescript": "4.2.4",
+    "@nbsolutions/object": "0.0.0-alpha.0"
   },
-  "dependencies": {
-    "@nbsolutions/object": "file:../object/nbsolutions-object-0.0.0.tgz"
-  }
+  "peerDependencies": {
+    "@nbsolutions/object": "0.0.0-alpha.0"
+  },
+  "dependencies": {}
 }
