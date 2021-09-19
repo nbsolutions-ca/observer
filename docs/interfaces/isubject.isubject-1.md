@@ -1,14 +1,15 @@
 [@nbsolutions/observer - v1.0.1](../README.md) / [Exports](../modules.md) / [ISubject](../modules/isubject.md) / ISubject
 
-# Interface: ISubject<TObserver\>
+# Interface: ISubject<TObserver, T\>
 
 [ISubject](../modules/isubject.md).ISubject
 
 ## Type parameters
 
-| Name |
-| :------ |
-| `TObserver` |
+| Name | Type |
+| :------ | :------ |
+| `TObserver` | `TObserver` |
+| `T` | `T` = `void` |
 
 ## Table of contents
 
@@ -22,46 +23,59 @@
 
 ### attachObserver
 
-▸ **attachObserver**(`observer`: TObserver): *void*
+▸ **attachObserver**(`observer`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `observer` | TObserver |
+| `observer` | `TObserver` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [ISubject.ts:3](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/ISubject.ts#L3)
+`void`
+
+#### Defined in
+
+[src/ISubject.ts:3](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/ISubject.ts#L3)
 
 ___
 
 ### detachObserver
 
-▸ **detachObserver**(`observer`: TObserver): *boolean*
+▸ **detachObserver**(`observer`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `observer` | TObserver |
+| `observer` | `TObserver` |
 
-**Returns:** *boolean*
+#### Returns
 
-Defined in: [ISubject.ts:4](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/ISubject.ts#L4)
+`boolean`
+
+#### Defined in
+
+[src/ISubject.ts:4](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/ISubject.ts#L4)
 
 ___
 
 ### notify
 
-▸ **notify**(`observer`: TObserver): *void*
+▸ **notify**(`observer`, `data`): `void`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `observer` | TObserver |
+| `observer` | `TObserver` |
+| `data` | `T` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [ISubject.ts:5](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/ISubject.ts#L5)
+`void`
+
+#### Defined in
+
+[src/ISubject.ts:5](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/ISubject.ts#L5)

@@ -55,10 +55,11 @@
     "typedoc": "0.20.36",
     "typedoc-plugin-markdown": "3.9.0",
     "typescript": "4.2.4",
-    "@nbsolutions/object": "0.0.0-alpha.0"
+    "@nbsolutions/object": "0.0.0"
   },
   "peerDependencies": {
-    "@nbsolutions/object": "0.0.0-alpha.0"
+    "@nbsolutions/object": ">= 0.0.0 <1",
+    "@nbsolutions/interfaces": ">= 0.0.0 <1"
   },
   "dependencies": {}
 }

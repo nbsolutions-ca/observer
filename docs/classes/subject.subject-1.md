@@ -1,6 +1,6 @@
 [@nbsolutions/observer - v1.0.1](../README.md) / [Exports](../modules.md) / [Subject](../modules/subject.md) / Subject
 
-# Class: Subject<TObserver\>
+# Class: Subject<TObserver, T\>
 
 [Subject](../modules/subject.md).Subject
 
@@ -15,9 +15,16 @@ can be invoked.
 
 ## Type parameters
 
-| Name |
-| :------ |
-| `TObserver` |
+| Name | Type |
+| :------ | :------ |
+| `TObserver` | `TObserver` |
+| `T` | `T` = `void` |
+
+## Hierarchy
+
+- `NBSObject`
+
+  ↳ **Subject**
 
 ## Table of contents
 
@@ -27,38 +34,84 @@ can be invoked.
 
 ### Methods
 
+- [\_excludeNBSObjectAutoBindingsFor](subject.subject-1.md#_excludenbsobjectautobindingsfor)
+- [\_skipNBSObjectAutoBind](subject.subject-1.md#_skipnbsobjectautobind)
 - [attachObserver](subject.subject-1.md#attachobserver)
 - [detachObserver](subject.subject-1.md#detachobserver)
 - [dispose](subject.subject-1.md#dispose)
+- [getClassName](subject.subject-1.md#getclassname)
 - [notify](subject.subject-1.md#notify)
+- [getClassName](subject.subject-1.md#getclassname)
+- [isVoid](subject.subject-1.md#isvoid)
 
 ## Constructors
 
 ### constructor
 
-\+ **new Subject**<TObserver\>(`subject`: [*ISubject*](../interfaces/isubject.isubject-1.md)<TObserver\>): [*Subject*](subject.subject-1.md)<TObserver\>
+• **new Subject**<TObserver, T\>(`subject`)
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `TObserver` |
+| Name | Type |
+| :------ | :------ |
+| `TObserver` | `TObserver` |
+| `T` | `T` = `void` |
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `subject` | [*ISubject*](../interfaces/isubject.isubject-1.md)<TObserver\> | The class that is doing the notifying. |
+| `subject` | [ISubject](../interfaces/isubject.isubject-1.md)<TObserver, T\> | The class that is doing the notifying. |
 
-**Returns:** [*Subject*](subject.subject-1.md)<TObserver\>
+#### Overrides
 
-Defined in: [Subject.ts:16](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/Subject.ts#L16)
+NBSObject.constructor
+
+#### Defined in
+
+[src/Subject.ts:17](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L17)
 
 ## Methods
 
+### \_excludeNBSObjectAutoBindingsFor
+
+▸ `Protected` **_excludeNBSObjectAutoBindingsFor**(): `string`[]
+
+#### Returns
+
+`string`[]
+
+#### Inherited from
+
+NBSObject.\_excludeNBSObjectAutoBindingsFor
+
+#### Defined in
+
+node_modules/@nbsolutions/object/types/NBSObject.d.ts:36
+
+___
+
+### \_skipNBSObjectAutoBind
+
+▸ `Protected` **_skipNBSObjectAutoBind**(): `boolean`
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+NBSObject.\_skipNBSObjectAutoBind
+
+#### Defined in
+
+node_modules/@nbsolutions/object/types/NBSObject.d.ts:34
+
+___
+
 ### attachObserver
 
-▸ **attachObserver**(`observer`: TObserver): *void*
+▸ **attachObserver**(`observer`): `void`
 
 Attaches the observer to the subject
 
@@ -66,17 +119,21 @@ Attaches the observer to the subject
 
 | Name | Type |
 | :------ | :------ |
-| `observer` | TObserver |
+| `observer` | `TObserver` |
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [Subject.ts:32](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/Subject.ts#L32)
+`void`
+
+#### Defined in
+
+[src/Subject.ts:34](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L34)
 
 ___
 
 ### detachObserver
 
-▸ **detachObserver**(`observer`: TObserver): *boolean*
+▸ **detachObserver**(`observer`): `boolean`
 
 Detaches the observer from the subject.
 
@@ -84,35 +141,127 @@ Detaches the observer from the subject.
 
 | Name | Type |
 | :------ | :------ |
-| `observer` | TObserver |
+| `observer` | `TObserver` |
 
-**Returns:** *boolean*
+#### Returns
+
+`boolean`
 
 true if an observer was indeed, detached.
 
-Defined in: [Subject.ts:41](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/Subject.ts#L41)
+#### Defined in
+
+[src/Subject.ts:43](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L43)
 
 ___
 
 ### dispose
 
-▸ **dispose**(): *void*
+▸ **dispose**(): `void`
 
 Disposes references of all observers.
 This should be used if no more broadcasts will be made.
 
-**Returns:** *void*
+#### Returns
 
-Defined in: [Subject.ts:64](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/Subject.ts#L64)
+`void`
+
+#### Defined in
+
+[src/Subject.ts:66](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L66)
+
+___
+
+### getClassName
+
+▸ **getClassName**(): `string`
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+NBSObject.getClassName
+
+#### Defined in
+
+node_modules/@nbsolutions/object/types/NBSObject.d.ts:26
 
 ___
 
 ### notify
 
-▸ **notify**(): *void*
+▸ **notify**(`data`): `void`
 
 Notifies all attached observers
 
-**Returns:** *void*
+#### Parameters
 
-Defined in: [Subject.ts:54](https://github.com/nbsolutions-ca/observer/blob/aef25bf/src/Subject.ts#L54)
+| Name | Type |
+| :------ | :------ |
+| `data` | `T` |
+
+#### Returns
+
+`void`
+
+#### Defined in
+
+[src/Subject.ts:56](https://github.com/nbsolutions-ca/observer/blob/22bc394/src/Subject.ts#L56)
+
+___
+
+### getClassName
+
+▸ `Static` **getClassName**(`o`): `string`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `o` | `any` |
+
+#### Returns
+
+`string`
+
+#### Inherited from
+
+NBSObject.getClassName
+
+#### Defined in
+
+node_modules/@nbsolutions/object/types/NBSObject.d.ts:37
+
+___
+
+### isVoid
+
+▸ `Static` **isVoid**<T\>(`o`): `boolean`
+
+Returns true if the given value is `null` or `undefined`
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `T` | `T` = `any` |
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `o` | `T` | Any value |
+
+#### Returns
+
+`boolean`
+
+#### Inherited from
+
+NBSObject.isVoid
+
+#### Defined in
+
+node_modules/@nbsolutions/object/types/NBSObject.d.ts:33
