@@ -1,1 +1,1 @@
-@nbsolutions/observer - v0.0.0 / [Exports](modules.md)
+@nbsolutions/observer - v0.0.1 / [Exports](modules.md)

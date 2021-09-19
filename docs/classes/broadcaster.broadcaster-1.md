@@ -1,8 +1,8 @@
-[@nbsolutions/observer - v0.0.0](../README.md) / [Exports](../modules.md) / [Subject](../modules/subject.md) / Subject
+[@nbsolutions/observer - v0.0.1](../README.md) / [Exports](../modules.md) / [Broadcaster](../modules/broadcaster.md) / Broadcaster
 
-# Class: Subject<TObserver, T\>
+# Class: Broadcaster<TObserver, T\>
 
-[Subject](../modules/subject.md).Subject
+[Broadcaster](../modules/broadcaster.md).Broadcaster
 
 Helper class that helps keeps track of observers.
 
@@ -24,31 +24,35 @@ can be invoked.
 
 - `NBSObject`
 
-  ↳ **Subject**
+  ↳ **Broadcaster**
+
+## Implements
+
+- `IBroadcast`<TObserver, T\>
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](subject.subject-1.md#constructor)
+- [constructor](broadcaster.broadcaster-1.md#constructor)
 
 ### Methods
 
-- [\_excludeNBSObjectAutoBindingsFor](subject.subject-1.md#_excludenbsobjectautobindingsfor)
-- [\_skipNBSObjectAutoBind](subject.subject-1.md#_skipnbsobjectautobind)
-- [attachObserver](subject.subject-1.md#attachobserver)
-- [detachObserver](subject.subject-1.md#detachobserver)
-- [dispose](subject.subject-1.md#dispose)
-- [getClassName](subject.subject-1.md#getclassname)
-- [notify](subject.subject-1.md#notify)
-- [getClassName](subject.subject-1.md#getclassname)
-- [isVoid](subject.subject-1.md#isvoid)
+- [\_excludeNBSObjectAutoBindingsFor](broadcaster.broadcaster-1.md#_excludenbsobjectautobindingsfor)
+- [\_skipNBSObjectAutoBind](broadcaster.broadcaster-1.md#_skipnbsobjectautobind)
+- [attachObserver](broadcaster.broadcaster-1.md#attachobserver)
+- [detachObserver](broadcaster.broadcaster-1.md#detachobserver)
+- [dispose](broadcaster.broadcaster-1.md#dispose)
+- [getClassName](broadcaster.broadcaster-1.md#getclassname)
+- [notify](broadcaster.broadcaster-1.md#notify)
+- [getClassName](broadcaster.broadcaster-1.md#getclassname)
+- [isVoid](broadcaster.broadcaster-1.md#isvoid)
 
 ## Constructors
 
 ### constructor
 
-• **new Subject**<TObserver, T\>(`subject`)
+• **new Broadcaster**<TObserver, T\>(`subject`)
 
 #### Type parameters
 
@@ -61,7 +65,7 @@ can be invoked.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `subject` | [ISubject](../interfaces/isubject.isubject-1.md)<TObserver, T\> | The class that is doing the notifying. |
+| `subject` | `ISubject`<TObserver, T\> | The class that is doing the notifying. |
 
 #### Overrides
 
@@ -69,7 +73,7 @@ NBSObject.constructor
 
 #### Defined in
 
-[src/Subject.ts:17](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L17)
+[src/Broadcaster.ts:17](https://github.com/nbsolutions-ca/observer/blob/ebdd229/src/Broadcaster.ts#L17)
 
 ## Methods
 
@@ -125,9 +129,13 @@ Attaches the observer to the subject
 
 `void`
 
+#### Implementation of
+
+IBroadcast.attachObserver
+
 #### Defined in
 
-[src/Subject.ts:34](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L34)
+[src/Broadcaster.ts:34](https://github.com/nbsolutions-ca/observer/blob/ebdd229/src/Broadcaster.ts#L34)
 
 ___
 
@@ -149,9 +157,13 @@ Detaches the observer from the subject.
 
 true if an observer was indeed, detached.
 
+#### Implementation of
+
+IBroadcast.detachObserver
+
 #### Defined in
 
-[src/Subject.ts:43](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L43)
+[src/Broadcaster.ts:43](https://github.com/nbsolutions-ca/observer/blob/ebdd229/src/Broadcaster.ts#L43)
 
 ___
 
@@ -168,7 +180,7 @@ This should be used if no more broadcasts will be made.
 
 #### Defined in
 
-[src/Subject.ts:66](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L66)
+[src/Broadcaster.ts:66](https://github.com/nbsolutions-ca/observer/blob/ebdd229/src/Broadcaster.ts#L66)
 
 ___
 
@@ -206,9 +218,13 @@ Notifies all attached observers
 
 `void`
 
+#### Implementation of
+
+IBroadcast.notify
+
 #### Defined in
 
-[src/Subject.ts:56](https://github.com/nbsolutions-ca/observer/blob/6bdbe67/src/Subject.ts#L56)
+[src/Broadcaster.ts:56](https://github.com/nbsolutions-ca/observer/blob/ebdd229/src/Broadcaster.ts#L56)
 
 ___
 

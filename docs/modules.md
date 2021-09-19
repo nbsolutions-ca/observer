@@ -1,11 +1,10 @@
-[@nbsolutions/observer - v0.0.0](README.md) / Exports
+[@nbsolutions/observer - v0.0.1](README.md) / Exports
 
-# @nbsolutions/observer - v0.0.0
+# @nbsolutions/observer - v0.0.1
 
 ## Table of contents
 
 ### Modules
 
-- [ISubject](modules/isubject.md)
-- [Subject](modules/subject.md)
+- [Broadcaster](modules/broadcaster.md)
 - [api](modules/api.md)
