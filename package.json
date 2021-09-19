@@ -44,7 +44,7 @@
   "homepage": "https://github.com/nbsolutions-ca/observer#readme",
   "devDependencies": {
     "@nbsolutions/eslint-plugin": "1.0.0",
-    "@nbsolutions/interfaces": "0.0.1",
+    "@nbsolutions/interfaces": "0.0.2",
     "@nbsolutions/object": "0.0.0",
     "@types/jest": "27.0.1",
     "@typescript-eslint/eslint-plugin": "4.31.1",

@@ -1,6 +1,6 @@
 
-import {ISubject} from '../src/ISubject';
-import {Subject} from '../src/Subject';
+import {ISubject} from '@nbsolutions/interfaces';
+import {Broadcaster} from '../src/Broadcaster';
 
 interface IConcreteObserver {
     onConcreteSubjectNotify(subject: ConcreteSubject, data: number): void;
@@ -11,10 +11,10 @@ class Foo implements IConcreteObserver {
 }
 
 class ConcreteSubject implements ISubject<IConcreteObserver, number> {
-    private $subject: Subject<IConcreteObserver, number>;
+    private $subject: Broadcaster<IConcreteObserver, number>;
 
     public constructor() {
-        this.$subject = new Subject<IConcreteObserver, number>(this);
+        this.$subject = new Broadcaster<IConcreteObserver, number>(this);
     }
 
     public attachObserver(observer: IConcreteObserver): void {

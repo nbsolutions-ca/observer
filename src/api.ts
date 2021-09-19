@@ -1,3 +1,2 @@
 
-export {ISubject} from './ISubject';
-export {Subject} from './Subject';
+export {Broadcaster} from './Broadcaster';

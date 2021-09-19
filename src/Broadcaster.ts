@@ -1,6 +1,6 @@
 
 import {NBSObject} from '@nbsolutions/object';
-import { ISubject} from './ISubject';
+import { IBroadcast, ISubject } from '@nbsolutions/interfaces';
 
 /**
  * Helper class that helps keeps track of observers.
@@ -12,7 +12,7 @@ import { ISubject} from './ISubject';
  * should be implemented, which will receive a concrete observer which
  * can be invoked.
  */
-export class Subject<TObserver, T = void> extends NBSObject {
+export class Broadcaster<TObserver, T = void> extends NBSObject implements IBroadcast<TObserver, T> {
     private $observers: TObserver[];
     private $subject: ISubject<TObserver, T>;
 
